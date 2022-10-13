@@ -1,0 +1,57 @@
+<app-header titulo="DateTime"></app-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Birthday</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime 
+          id="datetime" 
+          [value]="getDate()" 
+          presentation="date" 
+          (ionChange)="cambioFecha($event)"
+          [showDefaultButtons]="true"
+          displayFormat="YYYY/MM/DD"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Max & Min</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime-button datetime="datetime_max_min"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime 
+          id="datetime_max_min" 
+          presentation="date"
+          [showDefaultButtons]="true"
+          min="2015-01-01"
+          max="2025-12-31"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Custom Date-time</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime-button datetime="datetime_max_min"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,46 @@
+<app-header [titulo]="'Card'"></app-header>
+
+<ion-content class="ion-padding">
+  <h3>Basic</h3>
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+  <h3>Media</h3>
+  <ion-card mode="ios">
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+  <h3>Custom for me</h3>
+  <ion-card>
+    <ion-item>
+      <ion-icon slot="start" name="pin-outline"></ion-icon>
+      <ion-label>Marcador</ion-label>
+    </ion-item>
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, quam vitae saepe praesentium commodi placeat officia quo blanditiis non quod sit impedit, incidunt quas alias laborum dignissimos beatae quisquam eaque.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-img src="/assets/images/bruce.jpg"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>Martial Artist</ion-card-subtitle>
+      <ion-card-title>Buce Lee</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
